@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/materialize.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script type="text/javascript" src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+
+<head>
+
+<link rel="shortcut icon" href="http://tools.uiwap.com/icon/02/26.gif"/>
+<script language='JavaScript'>
+var txt="-Pharmaceutical Blockchain System-";
+var speed=300;
+var refresh=null;
+function action() { document.title=txt;
+txt=txt.substring(1,txt.length)+txt.charAt(0);
+refresh=setTimeout("action()",speed);}action();
+</script></head>
+
+<header>
+
+    <img src="https://i.ibb.co/BZPC2Bx/PHARMACEUTICAL.jpg"> 
+
+  </header>
+
+
+<body background="http://www.amandaabrahamphotography.com/wp-content/uploads/2013/09/museum-of-modern-free-stretch-blog-background.jpg">
+<center>
+<br><br><br><img src="http://tools.uiwap.com/logo/wel/welcome24.gif" ><br><br><br></center>
+<div class="container">
+    <div class="row">
+        <form action="/" method="post" class="col s12">
+            <div class="row valign-wrapper">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input type="text" id="name" name="name" value="">
+                    <label for="name">Enter Product Name</label>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Next
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </form>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+            <div class="col s12">
+                <a class="btn" href="/view.html">View previous records</a>
+                <br />
+                <br />
+                <a class="btn" href="/result.html">Check integrity of blockchain</a>
+				<br />
+				<br />
+				<a class="btn" href="/blockexplorer.html">Blockexplorer</a>
+            </div>
+        </div>
+        </div>
+		<center><div><br><br><h6> BCN3033 - NETWORK PROGRAMMING - GROUP PYTHON </h6></div></center>
+</body>
+

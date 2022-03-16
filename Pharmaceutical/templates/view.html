@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/materialize.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+
+<head>
+
+<link rel="shortcut icon" href="http://tools.uiwap.com/icon/02/26.gif"/>
+<script language='JavaScript'>
+var txt="-Pharmaceutical Blockchain System-";
+var speed=300;
+var refresh=null;
+function action() { document.title=txt;
+txt=txt.substring(1,txt.length)+txt.charAt(0);
+refresh=setTimeout("action()",speed);}action();
+</script></head>
+
+<header>
+
+    <img src="https://i.ibb.co/BZPC2Bx/PHARMACEUTICAL.jpg"> 
+
+  </header>
+<title>Pharmaceutical Blockchain System</title>
+
+<body background="http://www.amandaabrahamphotography.com/wp-content/uploads/2013/09/museum-of-modern-free-stretch-blog-background.jpg">
+
+<body class="blue-grey lighten-4">
+    <h6>Product Name: {{ name }} . <br><br>Here is the Ingredients Status</h6>
+    <br />
+	<br>
+    <h6>Date Issued: &emsp; {{ date }}</h6>
+    <br />
+    <br />
+    <table>
+        <thead>
+            <tr>
+                <th>Ingredients Code</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%  for i in range(1, number + 1) %}
+            <tr>
+                <td>{{ course }}-{{ year }}-{{ "%02d" %i }}</td>
+                <td>{{ status[i - 1] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br />
+
+    <button class="btn waves-effect waves-light" type="button" id="button" name="button">Go Back</button>
+    <script type="text/javascript">
+    function goBack() {
+        window.open("/", "_self");
+    }
+    var button = document.getElementById("button");
+    button.addEventListener("click", goBack);
+    </script>
+
+</body>
